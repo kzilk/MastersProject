@@ -7,6 +7,7 @@ from PasswordTestLinux import testLinuxPassword
 
 from WindowsEncrypt import check_authentication
 from WindowsHopTest import checkWinHop
+from Network_Pass import testWindowsPassword
 
 #osCheck
 osAB = check_OS()
@@ -37,6 +38,7 @@ else:
     #check encryption protocol
     if check_authentication():
         print('Test Password')
+        testWindowsPassword()
 
     else:
         exit()
