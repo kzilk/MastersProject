@@ -1,3 +1,4 @@
+#import modules
 import re
 import os
 from collections import defaultdict
@@ -37,8 +38,11 @@ def check_arp():
     arp_table = search_table(command_output)
     arp_duplicate = repeat(arp_table)
     if not arp_duplicate:
-            print("ARP CHECK PASSED. No duplicate MAC addresses located.")
-            return
+            #print("YOU ARE SAFE. No duplicate MAC addresses located.")
+            return "GREEN"
     else:
-            print("WARNING! Your ARP tables contains duplicate MAC ADDRESSES!:")
-            return
+            #print("WARNING! Your ARP tables contains duplicate MAC ADDRESSES!:")
+            return "RED"
+
+
+#print(check_arp())
