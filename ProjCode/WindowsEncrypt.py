@@ -1,10 +1,7 @@
 import re
 import os
 
-#wifi_name = input(str('Please enter the name of the WiFi network you have connected to: '))
-
 def command():
-
     os.system("netsh wlan show interfaces > network.txt")
     wireless_name = None
     with open("network.txt", "r") as file:
@@ -30,11 +27,18 @@ def search_command_output(command_output):
 def check_authentication():
     command_output = command()
     wifi_authentication = search_command_output(command_output)
+
+    passwordReq = True
+
     if wifi_authentication is not None:
             #print("The encrpytion protocol that is used by " + wifi_name + " is: ", wifi_authentication)
             if wifi_authentication in ["WPA2-Personal", "WPA3-Personal", "WPA2-PSK", "WPA3-PSK"]:
-                return "GREEN"
-
+                print(wifi_authentication, " Good")
+                return passwordReq
+            elif wifi_authentication in "WEP":
+                print(wifi_authentication, " Poor")
+                return passwordReq
             else:
-                print("Poor encrpytion")
-                return "RED"
+                passwordReq = False
+                print('No encryption/authentication found')
+                return passwordReq

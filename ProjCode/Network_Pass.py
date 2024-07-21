@@ -22,10 +22,10 @@ def testWindowsPassword():
     # Check if a password was found
     if password is not None:
         #there is a password requirement
-        return "GREEN"
+        return "GREEN, Password requirement found"
     else:
         #password field is null
-        return "RED"
+        return "RED, password requirement not found"
 
 
 #test = testWindowsPassword()

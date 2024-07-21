@@ -7,6 +7,7 @@ from PasswordTestLinux import testLinuxPassword
 
 from WindowsEncrypt import check_authentication
 from WindowsHopTest import checkWinHop
+from Network_Pass import testWindowsPassword
 
 #osCheck
 osAB = check_OS()
@@ -17,8 +18,6 @@ check_arp()
 
 #linux checks
 if osAB:
-    print('Please note if your device prompts you to enter a password during this '
-          'test, it may be a sign of a malicious access point.')
     #check hops to router
     checkLinHop()
     # check encryption protocol
@@ -30,7 +29,15 @@ if osAB:
 
 #windows checks
 else:
-    #check encryption protocol
-    check_authentication()
+
     #check hops to router
     checkWinHop()
+
+    #check encryption protocol
+    if check_authentication():
+        print('Test Password')
+        testWindowsPassword()
+
+    else:
+        exit()
+

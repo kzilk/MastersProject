@@ -1,2 +1,1 @@
-RT-AX5400-2C20 (192.168.50.1) at e8:9c:25:5a:2c:20 [ether] on enp8s0
 RT-AX5400-2C20 (192.168.50.1) at e8:9c:25:5a:2c:20 [ether] on wlp7s0

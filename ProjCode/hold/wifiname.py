@@ -10,6 +10,3 @@ def wireless_network_name():
                 break
     return wireless_name
 
-test = wireless_network_name()
-
-print(test)
