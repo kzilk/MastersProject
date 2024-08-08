@@ -28,17 +28,5 @@ def check_authentication():
     command_output = command()
     wifi_authentication = search_command_output(command_output)
 
-    passwordReq = True
-
     if wifi_authentication is not None:
-            #print("The encrpytion protocol that is used by " + wifi_name + " is: ", wifi_authentication)
-            if wifi_authentication in ["WPA2-Personal", "WPA3-Personal", "WPA2-PSK", "WPA3-PSK"]:
-                print(wifi_authentication, " Good")
-                return passwordReq
-            elif wifi_authentication in "WEP":
-                print(wifi_authentication, " Poor")
-                return passwordReq
-            else:
-                passwordReq = False
-                print('No encryption/authentication found')
-                return passwordReq
+        return wifi_authentication

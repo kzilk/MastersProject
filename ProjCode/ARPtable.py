@@ -1,6 +1,7 @@
 import re
 import os
 from collections import defaultdict
+from tkinter import *
 
 #create ARP table to parse through its content
 def command():
@@ -36,8 +37,8 @@ def check_arp():
     arp_table = search_table(command_output)
     arp_duplicate = repeat(arp_table)
     if not arp_duplicate:
-            print("ARP CHECK PASSED. No duplicate MAC addresses located.")
-            return
+            ARPtext= "ARP CHECK PASSED. No duplicate MAC addresses located."
+            return ARPtext
     else:
-            print("WARNING! Your ARP tables contains duplicate MAC ADDRESSES!:")
-            return
+            ARPtext="WARNING! Your ARP tables contains duplicate MAC ADDRESSES!:"
+            return ARPtext

@@ -16,6 +16,8 @@ def checkLinHop():
     connectionCount = lastLine[:2].strip()
 
     if connectionCount != "1":
-        print('Multiple hops to router')
+        hopText = 'Multiple hops to router'
+        return hopText
     else:
-        print('1 connection hop')
+        hopText = 'Single connection hop'
+        return hopText

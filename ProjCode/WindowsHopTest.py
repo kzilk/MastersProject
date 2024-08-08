@@ -20,8 +20,8 @@ def checkWinHop():
     connectionCount = lastLine.count('*')
 
     if connectionCount > 1:
-        print('Multiple hops to router')
-        return
+        hopText = 'Multiple hops to router'
+        return hopText
     else:
-        print('1 connection hop')
-        return
+        hopText = 'Single connection hop'
+        return hopText

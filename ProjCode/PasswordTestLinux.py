@@ -14,9 +14,11 @@ def testLinuxPassword():
 
     print('code = ', connectNet.returncode)
     if connectNet.returncode == 0:
-        print('Connected')
+        connectionRes = 'Connected'
+        return connectionRes
     elif connectNet.returncode == 10:
-        print('No network to test')
+        connectionRes = 'Unable to Find Network'
+        return connectionRes
 
 '''
 0: Success.
