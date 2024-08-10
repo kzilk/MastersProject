@@ -7,10 +7,13 @@ Professor Ziad Al Sharif
 
 Requirements:
 
-Python3 is required to run this program
-https://www.python.org/downloads/
-
 User must have a Windows or Linux operating system, with this being tested on Windows 10 and an Ubuntu distribution of Linux.
+
+Any system running this program must have a wireless network connection and the ability to access the command line.
+
+Linux Requirements:
+    Python3 is required to run this program
+    https://www.python.org/downloads/
 
 Common Issues:
 
@@ -18,10 +21,12 @@ Ensure the Tkinter module is set on your path to ensure proper display
 
 Please note below instructions for Linux password outputs
 
-Usage:
+Windows Usage:
+    To run the program, simply download and execute the WiFiSecurityTest.exe program file.
 
-To run the program, download the collected files and from that directory, run the Main.py python file
-
+Linux Usage:
+    For this, ensure your system has the latest version of Python installed and set to PATH as stated above. Download all files and run the python file Main.py to begin.
+    
 Once active, the window will display and the user may click the 'Start' button to begin a series of wireless network security tests as follows:
 
 1. Operating System Check:
