@@ -9,11 +9,11 @@ Requirements:
 
 User must have a Windows or Linux operating system, with this being tested on Windows 10 and an Ubuntu distribution of Linux.
 
+Python3 is required to run this program
+    https://www.python.org/downloads/
+
 Any system running this program must have a wireless network connection and the ability to access the command line.
 
-Linux Requirements:
-    Python3 is required to run this program
-    https://www.python.org/downloads/
 
 Common Issues:
 
