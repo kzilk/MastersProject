@@ -11,6 +11,7 @@ from Network_Pass import testWindowsPassword
 
 from tkinter import *
 
+
 def runProgram():
     # check operating system
     osTest = "Determining Operating System"
